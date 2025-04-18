@@ -4,7 +4,7 @@
 \alias{as.fmx.t}
 \title{Convert \code{t} fit from \CRANpkg{mixsmsn} to \linkS4class{fmx}}
 \usage{
-\method{as.fmx}{t}(x, data, ...)
+\method{as.fmx}{t}(x, data = double(), ...)
 }
 \arguments{
 \item{x}{\code{'t'} object,

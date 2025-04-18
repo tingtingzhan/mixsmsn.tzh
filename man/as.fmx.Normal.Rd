@@ -4,7 +4,7 @@
 \alias{as.fmx.Normal}
 \title{Convert \code{Normal} fit from \CRANpkg{mixsmsn} to \linkS4class{fmx}}
 \usage{
-\method{as.fmx}{Normal}(x, data, ...)
+\method{as.fmx}{Normal}(x, data = double(), ...)
 }
 \arguments{
 \item{x}{\code{'Normal'} object,

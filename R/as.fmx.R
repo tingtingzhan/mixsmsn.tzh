@@ -52,27 +52,18 @@
 #' @method as.fmx Skew.normal
 #' @export as.fmx.Skew.normal
 #' @export
-as.fmx.Skew.normal <- function(x, data, ...) {
+as.fmx.Skew.normal <- function(x, data = double(), ...) {
   x <- sort.Skew.normal(x, decreasing = FALSE)
   
-  ret <- new(Class = 'fmx', pars = cbind(
+  new(Class = 'fmx', pars = cbind(
     xi = x[['mu']],
     omega = sqrt(x[['sigma2']]),
     alpha = x[['shape']]
   ), 
   w = x[['pii']],
-  distname = 'sn')
+  distname = 'sn',
+  data = data)
   
-  if (!missing(data)) {
-    if (!length(data) || !is.numeric(data) || anyNA(data)) stop('illegal `data`')
-    ret@data <- data
-    # use ?methods::initialize
-    #ret@Kolmogorov <- Kolmogorov_fmx(ret)
-    #ret@CramerVonMises <- CramerVonMises_fmx(ret)
-    #ret@KullbackLeibler <- KullbackLeibler_fmx(ret)
-  }
-  
-  return(ret)
 }
 
 
@@ -106,27 +97,17 @@ as.fmx.Skew.normal <- function(x, data, ...) {
 #' @method as.fmx Normal
 #' @export as.fmx.Normal
 #' @export
-as.fmx.Normal <- function(x, data, ...) {
+as.fmx.Normal <- function(x, data = double(), ...) {
   x <- sort.Normal(x, decreasing = FALSE)
   
-  ret <- new(Class = 'fmx', pars = cbind(
+  new(Class = 'fmx', pars = cbind(
     mean = x[['mu']],
     sd = sqrt(x[['sigma2']])
   ), 
   w = x[['pii']],
-  distname = 'norm')
-  
-  if (!missing(data)) {
-    if (!length(data) || !is.numeric(data) || anyNA(data)) stop('illegal `data`')
-    ret@data <- data
-    # use ?methods::initialize
-    #ret@Kolmogorov <- Kolmogorov_fmx(ret)
-    #ret@CramerVonMises <- CramerVonMises_fmx(ret)
-    #ret@KullbackLeibler <- KullbackLeibler_fmx(ret)
-  }
-  
-  return(ret)
-  
+  distname = 'norm', 
+  data = data)
+
 }
 
 
@@ -161,31 +142,22 @@ as.fmx.Normal <- function(x, data, ...) {
 #' @method as.fmx Skew.t
 #' @export as.fmx.Skew.t
 #' @export
-as.fmx.Skew.t <- function(x, data, ...) {
+as.fmx.Skew.t <- function(x, data = double(), ...) {
   x <- sort.Skew.t(x, decreasing = FALSE)
   
   K <- length(x[['mu']]) # number of components
   if (length(x[['nu']]) != 1L) stop('\\pkg{mixsmsn} update to enable multiple `nu`? Modify ?npar.fmx') 
   
-  ret <- new(Class = 'fmx', pars = cbind(
+  new(Class = 'fmx', pars = cbind(
     xi = x[['mu']],
     omega = sqrt(x[['sigma2']]),
     alpha = x[['shape']],
     nu = x[['nu']]
   ), 
   w = x[['pii']],
-  distname = 'st')
+  distname = 'st',
+  data = data)
   
-  if (!missing(data)) {
-    if (!length(data) || !is.numeric(data) || anyNA(data)) stop('illegal `data`')
-    ret@data <- data
-    # use ?methods::initialize
-    #ret@Kolmogorov <- Kolmogorov_fmx(ret)
-    #ret@CramerVonMises <- CramerVonMises_fmx(ret)
-    #ret@KullbackLeibler <- KullbackLeibler_fmx(ret)
-  }
-  
-  return(ret)
 }
 
 
@@ -219,8 +191,7 @@ as.fmx.Skew.t <- function(x, data, ...) {
 #' @importFrom methods new
 #' @method as.fmx t
 #' @export
-as.fmx.t <- function(x, data, ...) {
-  if (!length(data) || !is.numeric(data) || anyNA(data)) stop('illegal `data`')
+as.fmx.t <- function(x, data = double(), ...) {
   x <- sort.t(x, decreasing = FALSE)
   stop('need to programe scale_and_shift_t')
   #new(Class = 'fmx', pars = cbind(

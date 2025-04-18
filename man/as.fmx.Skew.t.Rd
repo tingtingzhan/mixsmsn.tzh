@@ -4,7 +4,7 @@
 \alias{as.fmx.Skew.t}
 \title{Convert \code{Skew.t} fit from \CRANpkg{mixsmsn} to \linkS4class{fmx}}
 \usage{
-\method{as.fmx}{Skew.t}(x, data, ...)
+\method{as.fmx}{Skew.t}(x, data = double(), ...)
 }
 \arguments{
 \item{x}{\code{'Skew.t'} object,

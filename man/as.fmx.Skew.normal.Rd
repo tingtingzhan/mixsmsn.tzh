@@ -4,7 +4,7 @@
 \alias{as.fmx.Skew.normal}
 \title{Convert \code{Skew.normal} Object to \linkS4class{fmx}}
 \usage{
-\method{as.fmx}{Skew.normal}(x, data, ...)
+\method{as.fmx}{Skew.normal}(x, data = double(), ...)
 }
 \arguments{
 \item{x}{\code{'Skew.normal'} object,
