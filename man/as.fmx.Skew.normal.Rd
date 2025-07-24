@@ -2,7 +2,7 @@
 % Please edit documentation in R/as.fmx.R
 \name{as.fmx.Skew.normal}
 \alias{as.fmx.Skew.normal}
-\title{Convert \code{Skew.normal} Object to \linkS4class{fmx}}
+\title{Convert \code{Skew.normal} Object to \link[fmx]{fmx-class}}
 \usage{
 \method{as.fmx}{Skew.normal}(x, data = double(), ...)
 }
@@ -16,17 +16,16 @@ returned from \link[mixsmsn]{smsn.mix} with parameter
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Function \code{\link[=as.fmx.Skew.normal]{as.fmx.Skew.normal()}} returns an \linkS4class{fmx} object.
+Function \code{\link[=as.fmx.Skew.normal]{as.fmx.Skew.normal()}} returns an \link[fmx]{fmx-class} object.
 }
 \description{
 To convert \code{Skew.normal} object (from package \CRANpkg{mixsmsn})
-to \linkS4class{fmx} class.
+to \link[fmx]{fmx-class} class.
 }
 \note{
 \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.
 }
 \examples{
-library(mixsmsn)
 ag1 = c(mu = 5, sigma2 = 9, lambda = 5, nu = 5)
 ag2 = c(mu = 20, sigma2 = 16, lambda = -3, nu = 5)
 ag3 = c(mu = 35, sigma2 = 9, lambda = -6, nu = 5)

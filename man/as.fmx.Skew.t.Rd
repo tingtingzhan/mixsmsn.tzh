@@ -2,7 +2,7 @@
 % Please edit documentation in R/as.fmx.R
 \name{as.fmx.Skew.t}
 \alias{as.fmx.Skew.t}
-\title{Convert \code{Skew.t} fit from \CRANpkg{mixsmsn} to \linkS4class{fmx}}
+\title{Convert \code{Skew.t} fit from \CRANpkg{mixsmsn} to \link[fmx]{fmx-class}}
 \usage{
 \method{as.fmx}{Skew.t}(x, data = double(), ...)
 }
@@ -16,11 +16,11 @@ returned from \link[mixsmsn]{smsn.mix} with parameter
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Function \code{\link[=as.fmx.Skew.t]{as.fmx.Skew.t()}} returns an \linkS4class{fmx} object.
+Function \code{\link[=as.fmx.Skew.t]{as.fmx.Skew.t()}} returns an \link[fmx]{fmx-class} object.
 }
 \description{
 To convert \code{Skew.t} object (from package \CRANpkg{mixsmsn})
-to \linkS4class{fmx} class.
+to \link[fmx]{fmx-class} class.
 }
 \note{
 \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.

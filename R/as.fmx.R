@@ -5,11 +5,11 @@
 ## Convert package **`mixsmsn`** returns to `'fmx'`
 
 
-#' @title Convert `Skew.normal` Object to \linkS4class{fmx}
+#' @title Convert `Skew.normal` Object to \link[fmx]{fmx-class}
 #' 
 #' @description 
 #' To convert `Skew.normal` object (from package \CRANpkg{mixsmsn}) 
-#' to \linkS4class{fmx} class.
+#' to \link[fmx]{fmx-class} class.
 #' 
 #' @param x `'Skew.normal'` object, 
 #' returned from \link[mixsmsn]{smsn.mix} with parameter 
@@ -23,10 +23,9 @@
 #' \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.
 #' 
 #' @returns 
-#' Function [as.fmx.Skew.normal()] returns an \linkS4class{fmx} object.
+#' Function [as.fmx.Skew.normal()] returns an \link[fmx]{fmx-class} object.
 #' 
 #' @examples
-#' library(mixsmsn)
 #' ag1 = c(mu = 5, sigma2 = 9, lambda = 5, nu = 5)
 #' ag2 = c(mu = 20, sigma2 = 16, lambda = -3, nu = 5)
 #' ag3 = c(mu = 35, sigma2 = 9, lambda = -6, nu = 5)
@@ -70,11 +69,11 @@ as.fmx.Skew.normal <- function(x, data = double(), ...) {
 
 
 
-#' @title Convert `Normal` fit from \CRANpkg{mixsmsn} to \linkS4class{fmx}
+#' @title Convert `Normal` fit from \CRANpkg{mixsmsn} to \link[fmx]{fmx-class}
 #' 
 #' @description
 #' To convert `Normal` object (from package \CRANpkg{mixsmsn}) 
-#' to \linkS4class{fmx} class.
+#' to \link[fmx]{fmx-class} class.
 #' 
 #' @param x `'Normal'` object, 
 #' returned from \link[mixsmsn]{smsn.mix} with parameter 
@@ -88,7 +87,7 @@ as.fmx.Skew.normal <- function(x, data = double(), ...) {
 #' \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.
 #' 
 #' @returns 
-#' Function [as.fmx.Normal()] returns an \linkS4class{fmx} object.
+#' Function [as.fmx.Normal()] returns an \link[fmx]{fmx-class} object.
 #' 
 #' @keywords internal
 #' @importFrom fmx as.fmx
@@ -115,11 +114,11 @@ as.fmx.Normal <- function(x, data = double(), ...) {
 
 
 
-#' @title Convert `Skew.t` fit from \CRANpkg{mixsmsn} to \linkS4class{fmx}
+#' @title Convert `Skew.t` fit from \CRANpkg{mixsmsn} to \link[fmx]{fmx-class}
 #' 
 #' @description
 #' To convert `Skew.t` object (from package \CRANpkg{mixsmsn}) 
-#' to \linkS4class{fmx} class.
+#' to \link[fmx]{fmx-class} class.
 #' 
 #' @param x `'Skew.t'` object, 
 #' returned from \link[mixsmsn]{smsn.mix} with parameter 
@@ -133,7 +132,7 @@ as.fmx.Normal <- function(x, data = double(), ...) {
 #' \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.
 #' 
 #' @returns 
-#' Function [as.fmx.Skew.t()] returns an \linkS4class{fmx} object.
+#' Function [as.fmx.Skew.t()] returns an \link[fmx]{fmx-class} object.
 #' 
 #' @keywords internal
 #' @importFrom fmx as.fmx
@@ -165,11 +164,11 @@ as.fmx.Skew.t <- function(x, data = double(), ...) {
 
 
 
-#' @title Convert `t` fit from \CRANpkg{mixsmsn} to \linkS4class{fmx}
+#' @title Convert `t` fit from \CRANpkg{mixsmsn} to \link[fmx]{fmx-class}
 #' 
 #' @description
 #' To convert `t` object (from package \CRANpkg{mixsmsn}) 
-#' to \linkS4class{fmx} class.
+#' to \link[fmx]{fmx-class} class.
 #' 
 #' @param x `'t'` object, 
 #' returned from \link[mixsmsn]{smsn.mix} with parameter 

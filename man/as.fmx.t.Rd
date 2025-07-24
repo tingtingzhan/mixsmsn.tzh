@@ -2,7 +2,7 @@
 % Please edit documentation in R/as.fmx.R
 \name{as.fmx.t}
 \alias{as.fmx.t}
-\title{Convert \code{t} fit from \CRANpkg{mixsmsn} to \linkS4class{fmx}}
+\title{Convert \code{t} fit from \CRANpkg{mixsmsn} to \link[fmx]{fmx-class}}
 \usage{
 \method{as.fmx}{t}(x, data = double(), ...)
 }
@@ -20,7 +20,7 @@ Function \code{\link[=as.fmx.t]{as.fmx.t()}} has not been completed yet
 }
 \description{
 To convert \code{t} object (from package \CRANpkg{mixsmsn})
-to \linkS4class{fmx} class.
+to \link[fmx]{fmx-class} class.
 }
 \note{
 \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.
